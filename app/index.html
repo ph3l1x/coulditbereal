@@ -1,36 +1,26 @@
 <!DOCTYPE html>
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Could this be real?</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
 </head>
 <body>
 
+    <ng-view></ng-view>
+
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="app.js"></script>
-    <script src="components/version/version.js"></script>
-    <script src="components/version/version-directive.js"></script>
-    <script src="components/version/interpolate-filter.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDI2ZCNCffENev6eAYmePcLTQC_QwokXFw",
-      authDomain: "could-it-be-real.firebaseapp.com",
-      databaseURL: "https://could-it-be-real.firebaseio.com",
-      storageBucket: "could-it-be-real.appspot.com"
-    };
-    firebase.initializeApp(config);
-    </script>
+    <script src="app.js"></script>
+    <script src="authentication/authentication.js"></script>
 </body>
 </html>
