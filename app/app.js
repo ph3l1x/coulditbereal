@@ -25,6 +25,9 @@
                 if(error === "AUTH_REQUIRED") {
                     console.log("ERROR");
                     $state.go("/auth");
+                } else {
+                    $state.go("/home");
+                    console.log("LOGGED IN: ", Auth.$getAuth());
                 }
             });
         }])
@@ -35,15 +38,15 @@
                     controller: "HomeController as home",
                     templateUrl: "components/home/homeView.html",
                     resolve: {
-                        currentAuth: ["Auth", function(Auth) {
-                            return Auth.$getAuth();
+                        "currentAuth": ["Auth", function(Auth) {
+                            return Auth.$requireSignIn();
                         }]
                     }
                 })
-                .state('index', {
-                    url: ' ',
-                    controller: 'MainController'
-                })
+//                .state('index', {
+//                    url: ' ',
+//                    controller: 'MainController'
+//                })
                 .state('register', {
                     url: '/register',
                     templateUrl: 'components/register/registerView.html',
