@@ -30,11 +30,12 @@
         }])
         .config(["$urlRouterProvider", "$stateProvider", function($urlRouteProvider, $stateProvider) {
             $stateProvider
-                .state("/home", {
+                .state("home", {
+                    url: '/home',
                     controller: "HomeController as home",
                     templateUrl: "components/home/homeView.html",
                     resolve: {
-                        "currentAuth": ["Auth", function(Auth) {
+                        currentAuth: ["Auth", function(Auth) {
                             return Auth.$getAuth();
                         }]
                     }
@@ -52,6 +53,16 @@
                     url: '/auth',
                     templateUrl: 'components/authentication/authentication.html',
                     controller: 'AuthController as auth'
+                })
+                .state('emailVerify', {
+                    url: '/verify-email?mode&oobCode',
+                    templateUrl: 'components/authentication/verify-email.html',
+                    controller: 'authController',
+                    resolve: {
+                        currentAuth: ['Auth', function(Auth) {
+                            return Auth.$requireSignIn();
+                        }]
+                    }
                 });
             $urlRouteProvider.otherwise('/auth');
         }]);
