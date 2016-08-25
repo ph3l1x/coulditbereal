@@ -3,12 +3,18 @@
 
     angular
         .module('AuthenticationApp')
-        .controller('AuthController', AuthController);
+        .controller('AuthController', ['$scope', '$state', 'Auth', AuthController]);
     
-    function AuthController(Auth, $state) {
+    function AuthController($scope, $state, Auth) {
         console.log("AUTH: ", Auth);
+        console.log($scope);
         var vm = this;
         vm.login = login;
+
+         $scope.fbShowMe = false;
+         $scope.facebookShowModal = function() {
+             $scope.fbShowMe = true;
+         };
         
         function saveUser() {
             // TODO: save the user data at the users endpoint
@@ -20,7 +26,7 @@
             ).then(function(data) {
                 vm.email = null;
                 vm.password = null;
-                $state.go('/home');
+                $state.go('home');
             }).catch(function(error) {
                 console.log(error);
             })

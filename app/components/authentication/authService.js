@@ -2,8 +2,7 @@
 //     'use strict';
 //
 //     angular.module('AuthenticationApp')
-//         // .factory('Auth', AuthService);
-//         .factory('Auth', ["$firebaseAuth", function($firebaseAuth) {
+//         .service('Auth', ["$firebaseAuth", function($firebaseAuth) {
 //             return $firebaseAuth();
 //         }]);
 // })();
