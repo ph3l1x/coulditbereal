@@ -3,7 +3,6 @@
     angular.module('AuthenticationApp', []);
     angular.module('HomeApp', []);
     angular.module('RegisterApp', []);
-    // angular.module('EmailVerifyApp', []);
     angular.module('cibrApp', [
             'firebase',
             'ngMaterial',

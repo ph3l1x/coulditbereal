@@ -1,8 +1,8 @@
 <md-content class="md-padding">
     <h1 class="md-display-2">Login</h1>
     <md-input-container style="display:block">
-        <button ng-click="facebookShowModal()">FaceBook</button>
-        <button>Gmail</button>
+        <fb:login-button ng-controller="facebookController" data-auto-logout-link="true" scope="public_profile,email" size="large"></fb:login-button>
+        <div ng-controller="googleController" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     </md-input-container>
     <md-input-container>
         <label>Email</label>
@@ -14,5 +14,5 @@
     </md-input-container>
     <md-button class="md-raised md-warn" ng-click="auth.login()">Login</md-button>
 </md-content>
-<facebook-modal ng-show="fbShowMe"></facebook-modal>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 

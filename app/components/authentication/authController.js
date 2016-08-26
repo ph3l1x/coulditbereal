@@ -11,10 +11,7 @@
         var vm = this;
         vm.login = login;
 
-         $scope.fbShowMe = false;
-         $scope.facebookShowModal = function() {
-             $scope.fbShowMe = true;
-         };
+
         
         function saveUser() {
             // TODO: save the user data at the users endpoint
@@ -31,5 +28,7 @@
                 console.log(error);
             })
         }
+
+        
     }
 })();
