@@ -1,0 +1,30 @@
+<header>
+    <div class="container-fluid headerContainer">
+        <div class="headerContainerInner">
+            <div class="logo">
+                Could It Be Real?
+            </div>
+            <nav>
+                <button>Add Video</button>
+            </nav>
+            <div class="search">
+                <form>
+                    <input type="text"/>
+                </form>
+            </div>
+
+            <div class="userContainer">
+                <div ng-if="user">
+                    <div class="name">Hello, {{ username }}</div>
+                    <div class="userPhoto"><img src="{{ userImage }}"/></div>
+                    <button ng-click="logout()">Logout</button>
+                </div>
+                <div ng-if="!user">
+                    <button ng-click="logout()">Login</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</header>

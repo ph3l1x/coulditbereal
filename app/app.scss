@@ -1,0 +1,38 @@
+body {
+  background: url('images/3d-abstract-hd-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  //background: rgba(255, 255, 255, 0.5);
+
+  button {
+    background: none;
+    border: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+  }
+}
+
+.logo {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 50px;
+  float: left;
+  padding-right: 20px;
+}
+
+.headerContainer {
+  color: #fff;
+}
+
+nav {
+  float: left;
+}
+
+.search {
+  float: left;
+}
+
+.userContainer {
+  float: right;
+}

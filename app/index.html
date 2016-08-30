@@ -11,54 +11,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="app.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
-
 </head>
-<body ng-app="cibrApp">
-
-<div layout="row">
-    <div flex="33" offset="33">
+    <body ng-app="cibrApp" ng-controller="wrapperController">
+        <header-wrapper></header-wrapper>
         <div ui-view></div>
-    </div>
-</div>
+        <div footer></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="node_modules/angular-material/angular-material.js"></script>
-    <script src="node_modules/angular-animate/angular-animate.js"></script>
-    <script src="node_modules/angular-aria/angular-aria.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDI2ZCNCffENev6eAYmePcLTQC_QwokXFw",
-            authDomain: "could-it-be-real.firebaseapp.com",
-            databaseURL: "https://could-it-be-real.firebaseio.com",
-            storageBucket: "could-it-be-real.appspot.com"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <script src="node_modules/angular-md5/angular-md5.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Application Scripts -->
-    <script src="app.js"></script>
-    <script src="components/authentication/authController.js"></script>
-    <!--<script src="components/authentication/authFacebookDirective.js"></script>-->
-    <!--<script src="components/authentication/authService.js"></script>-->
-    <script src="components/home/homeController.js"></script>
-    <script src="components/home/homeService.js"></script>
-    <script src="components/register/registerController.js"></script>
-    <script src="components/authentication/facebookController.js"></script>
-    <script src="components/authentication/googleController.js"></script>
-    <script src="//connect.facebook.net/en_US/sdk.js"></script>
-    <!--<script src="components/authentication/emailVerifyController.js"></script>-->
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="node_modules/angular-material/angular-material.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+        <script src="node_modules/angular-aria/angular-aria.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDI2ZCNCffENev6eAYmePcLTQC_QwokXFw",
+                authDomain: "could-it-be-real.firebaseapp.com",
+                databaseURL: "https://could-it-be-real.firebaseio.com",
+                storageBucket: "could-it-be-real.appspot.com"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="node_modules/angular-md5/angular-md5.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Application Scripts -->
+        <script src="app.js"></script>
+        <script src="components/authentication/authController.js"></script>
+        <script src="components/home/homeController.js"></script>
+        <script src="components/home/homeService.js"></script>
+        <script src="components/register/registerController.js"></script>
+        <script src="components/wrapper/wrapperController.js"></script>
+        <script src="components/authentication/facebookController.js"></script>
+        <script src="components/authentication/googleController.js"></script>
+        <script src="components/wrapper/wrapperDirective.js"></script>
+        <script src="components/authentication/googleDirective.js"></script>
+        <script src="components/authentication/facebookDirective.js"></script>
+        <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    </body>
 </html>

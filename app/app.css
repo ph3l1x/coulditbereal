@@ -1,31 +1,27 @@
-.face {
-  border-radius: 30px;
-  border: 1px solid #ddd;
-  width: 48px;
-  margin: 16px;
-}
+body {
+  background: url('images/3d-abstract-hd-background.jpg') no-repeat center center fixed;
+  background-size: cover; }
 
-.remove-status {
-  cursor: pointer;
-  color: red;
-  font-weight: bold;
-}
+header button {
+  background: none;
+  border: 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px; }
 
-.fb-modal-container {
-    background: rgba(0, 0, 0, 0.5);
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-}
-.fb-modal-inner {
-    position:fixed;
-    width:300px;
-    height:200px;
-    background: white;
-    left: 50%;
-    transform: translateX(-50%);
-    top:50%;
-    margin-top:-150px;
-    z-index:400;
-}
+.logo {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 50px;
+  float: left;
+  padding-right: 20px; }
+
+.headerContainer {
+  color: #fff; }
+
+nav {
+  float: left; }
+
+.search {
+  float: left; }
+
+.userContainer {
+  float: right; }

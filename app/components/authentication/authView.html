@@ -1,18 +1,18 @@
-<md-content class="md-padding">
+<main>
     <h1 class="md-display-2">Login</h1>
-    <md-input-container style="display:block">
-        <fb:login-button ng-controller="facebookController" data-auto-logout-link="true" scope="public_profile,email" size="large"></fb:login-button>
-        <div ng-controller="googleController" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    </md-input-container>
-    <md-input-container>
-        <label>Email</label>
-        <input ng-model="auth.email" type="text">
-    </md-input-container>
-    <md-input-container>
-        <label>Password</label>
-        <input type="password" ng-model="auth.password" type="text">
-    </md-input-container>
-    <md-button class="md-raised md-warn" ng-click="auth.login()">Login</md-button>
-</md-content>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
 
+        <div class="facebookStuff" ng-controller="facebookController">
+            <facebook-login></facebook-login>
+        </div>
+        <div class="googleStuff" ng-controller="googleController">
+            <google-login></google-login>
+        </div>
+
+        <label>Email</label>
+        <input id="email" ng-model="auth.email" type="text">
+
+        <label>Password</label>
+        <input id="password" type="password" ng-model="auth.password" type="text">
+
+    <button class="md-raised md-warn" ng-click="auth.login()">Login</button>
+</main>

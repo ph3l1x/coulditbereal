@@ -19,6 +19,7 @@
         .controller("MainController", ["$scope", "Auth", function ($scope, Auth) {
             $scope.auth = Auth;
             $scope.user = $scope.auth.$getAuth();
+        
         }])
         .run(["$rootScope", "$state", function ($rootScope, $state) {
             $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {

@@ -3,15 +3,22 @@
 
     angular
         .module('AuthenticationApp')
-        .controller('AuthController', ['$scope', '$state', 'Auth', AuthController]);
-    
+        .controller('AuthController', [
+            '$scope',
+            '$state',
+            'Auth',
+            'firebase',
+            AuthController
+        ]);
+
     function AuthController($scope, $state, Auth) {
         console.log("AUTH: ", Auth);
         console.log($scope);
         var vm = this;
         vm.login = login;
-
-
+        console.log("SDFSD")
+        
+        
         
         function saveUser() {
             // TODO: save the user data at the users endpoint
@@ -29,6 +36,6 @@
             })
         }
 
-        
+
     }
 })();
