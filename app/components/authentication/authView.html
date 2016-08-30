@@ -1,0 +1,18 @@
+<main>
+    <h1 class="md-display-2">Login</h1>
+
+        <div class="facebookStuff" ng-controller="facebookController">
+            <facebook-login></facebook-login>
+        </div>
+        <div class="googleStuff" ng-controller="googleController">
+            <google-login></google-login>
+        </div>
+
+        <label>Email</label>
+        <input id="email" ng-model="auth.email" type="text">
+
+        <label>Password</label>
+        <input id="password" type="password" ng-model="auth.password" type="text">
+
+    <button class="md-raised md-warn" ng-click="auth.login()">Login</button>
+</main>

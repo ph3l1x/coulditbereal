@@ -1,26 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Could this be real?</title>
+    <meta name="google-signin-client_id" content="1086095044517-jqakemna8ddj9spes6po3c7hqd59k1md.apps.googleusercontent.com">
+    <meta name="google-signin-cookiepolicy" content="single_host_origin">
+    <meta name="google-signin-scope" content="profile email">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="app.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
 </head>
-<body>
+    <body ng-app="cibrApp" ng-controller="wrapperController">
+        <header-wrapper></header-wrapper>
+        <div ui-view></div>
+        <div footer></div>
 
-    <ng-view></ng-view>
-
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/firebase/firebase.js"></script>
-    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
-    <script src="authentication/authentication.js"></script>
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="node_modules/angular-material/angular-material.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+        <script src="node_modules/angular-aria/angular-aria.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDI2ZCNCffENev6eAYmePcLTQC_QwokXFw",
+                authDomain: "could-it-be-real.firebaseapp.com",
+                databaseURL: "https://could-it-be-real.firebaseio.com",
+                storageBucket: "could-it-be-real.appspot.com"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="node_modules/angular-md5/angular-md5.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Application Scripts -->
+        <script src="app.js"></script>
+        <script src="components/authentication/authController.js"></script>
+        <script src="components/home/homeController.js"></script>
+        <script src="components/home/homeService.js"></script>
+        <script src="components/register/registerController.js"></script>
+        <script src="components/wrapper/wrapperController.js"></script>
+        <script src="components/authentication/facebookController.js"></script>
+        <script src="components/authentication/googleController.js"></script>
+        <script src="components/wrapper/wrapperDirective.js"></script>
+        <script src="components/authentication/googleDirective.js"></script>
+        <script src="components/authentication/facebookDirective.js"></script>
+        <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    </body>
 </html>
